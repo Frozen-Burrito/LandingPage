@@ -1,0 +1,274 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.body {
+    width: 100%;
+    margin: 0;
+
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Global*/
+img {
+    max-width: 100%; 
+}
+
+.content {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #222;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    color: rgb(75, 75, 75);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 0.4rem;
+
+    background-color: white;
+    border: 2px solid rgb(24, 24, 24);
+}
+
+.button-content {
+    width: 80%;
+    height: 80%;
+    padding: 0.8rem 2rem;
+
+    background-color: rgb(24, 24, 24);
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* Landing */
+.landing {
+    height: 90vh;
+    background-image: url('../img/landing.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.landing-content {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.landing-content h1 {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12rem;
+    letter-spacing: 4rem;
+    font-weight: 200;
+}
+
+.landing-top {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.4rem;
+}
+
+.landing-top i {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 1.6rem;
+    padding: 0 1rem;
+}
+
+.landing-content h3 {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(200, 200, 200);
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.6rem;;
+}
+
+/* NavBar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1rem 4rem;
+    background-color: rgb(24, 24, 24);
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+
+    color: rgb(200, 200, 200);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.icon h3 {
+    font-weight: 200;
+}
+
+.icon i {
+    margin-right: 1rem;
+    color: rgb(175, 51, 51);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 2rem;
+
+    color: rgb(200, 200, 200);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
+}
+
+/* Features */
+.feature {
+    margin: 6rem 0;
+    max-height: 24rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+}
+
+.feature img {
+    width: 40%;
+}
+
+/* Survey */
+.survey {
+    margin: 0 auto;
+    height: 80vh;
+    display:  flex;
+    justify-content: space-evenly;
+}
+
+.survey-opt {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.survey-opt h3 {
+    color: rgb(245, 245, 245);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.first {
+    background-image: url(../img/card_2.jpg);
+}
+
+.second {
+    background-image: url(../img/card_3.jpg);
+}
+
+.third {
+    background-image: url(../img/card_1.jpg);
+}
+
+/* Partners */
+.partners {
+    padding: 2rem 0;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+}
+
+.partners div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.partners div i {
+    color: rgb(150, 150, 150);
+    font-size: 3rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 1rem;
+
+    background-color: rgb(24, 24, 24);
+}
+
+footer i {
+    margin-left: 1rem;
+
+    color: rgb(200, 200, 200);
+
+    font-size: 2rem;
+}
