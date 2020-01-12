@@ -8,6 +8,6 @@ This is a simple frontend landing page developed using html, css & javaScript. I
 
  ## To-Do
 
- - [] Finish the **Footer** section
- - [] Add some javaScript
- - [] Make it responsive
+ - [x] Finish the **Footer** section
+ - [x] Add some javaScript
+ - [x] Responsive

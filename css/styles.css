@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -8,8 +16,9 @@ html {
 }
 
 html, body {
-    height: 100%;
+    height: 100vh;
     margin: 0 auto;
+    line-height: 1.2;
 
     font-family: 'Montserrat', sans-serif;
 }
@@ -23,14 +32,13 @@ img {
 }
 
 .content {
-    max-width: 80rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
 h1 {
     margin: 0;
   
-    text-align: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14rem;
     letter-spacing: 0.3em;
@@ -38,9 +46,10 @@ h1 {
 }
 
 h2 {
+    margin-bottom: 2rem;
     color: #222;
     font-size: 3rem;
-    text-transform: uppercase;
+    text-transform: uppercase;  
     font-weight: 400;
 }
 
@@ -55,6 +64,7 @@ h3 {
 }
 
 p {
+    margin: 1rem 0;
     color: rgb(75, 75, 75);
     font-size: 1rem;
     font-weight: 400;
@@ -64,13 +74,37 @@ a {
     text-decoration: none;
 }
 
+@media (max-width: 1170px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
 .center {
     text-align: center;
 }
 
 .button {
     display: inline-block;
-    padding: 0.8rem 0.1rem;
+    padding: 1rem 0.1rem;
 
     background-color: rgba(255, 255, 255, 0);
     border: 4px solid #222;
@@ -90,11 +124,10 @@ a {
 }
 
 .action-btn{
-
     margin-top: 3rem;
 
     display: inline-block;
-    padding: 1rem 0.1rem;
+    padding: 1.3rem 0.1rem;
 
     background-color: rgba(255, 255, 255, 0);
     border: 4px solid #222;
@@ -124,7 +157,7 @@ a {
 
 /* Landing */
 .landing {
-    height: 90vh;
+    height: 91vh;
     background-image: url('../img/landing.jpg');
     background-size: cover;
     background-position: center center;
@@ -139,6 +172,12 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    .landing-content {
+        top: 60%;
+    }
 }
 
 .landing-top {
@@ -164,10 +203,10 @@ a {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding-left: 4rem;
     background-color: #242424;
-
 }
 
 .icon {
@@ -215,9 +254,106 @@ nav a:hover {
     background-color: rgba(175, 51, 51, 0.8);
 }
 
+@media (max-width: 800px) {
+
+    /* Temporal */
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        background-color: rgba(0,0,0, 0.8);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        visibility: hidden;
+    }
+
+    nav.open {
+        visibility: visible;
+    }
+
+    nav a  {
+        width: 70%;
+        padding: 1.8rem 1rem;
+
+        text-align: center;
+        font-size: 2.6;
+    }
+
+    .navbar {
+        padding-left: 2rem;
+    }
+
+    .menu-btn {
+        position: absolute;
+        z-index: 1;
+        right: 1rem;
+        top: 94%;
+        height: 2rem;
+        width: 2.6rem;
+        cursor: pointer;
+
+        transition: all .3s ease-in-out;
+    }
+
+    .menu-btn_burger {
+        position: absolute;
+        right: 0;
+        top: 0.8rem;
+        width: 2.6rem;
+        height: 0.3rem;
+        background: rgb(200, 200, 200);
+
+        transition: all .3s ease-in-out;
+    }
+
+    .menu-btn_burger::before {
+        content: '';
+        position: absolute;
+        top: -0.8rem;
+        width: 2.6rem;
+        height: 0.3rem;
+        background: rgb(200, 200, 200);
+
+        transition: all .3s ease-in-out;
+    }
+
+    .menu-btn_burger::after {
+        content: '';
+        position: absolute;
+        top: 0.8rem;
+        width: 2.6rem;
+        height: 0.3rem;
+        background: rgb(200, 200, 200);
+
+        transition: all .3s ease-in-out;
+    }
+
+    .menu-btn_burger.open {
+        -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+
+        background: transparent;
+    }
+
+    .menu-btn_burger.open::before {
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-btn_burger.open::after {
+        -webkit-transform: rotate(-45deg) translate(12px,-12px);
+        transform: rotate(-45deg) translate(12px,-12px);
+    }
+}
+
 /* Features */
 .feature {
-    margin: 6rem 0;
+    margin: 3rem 0;
     max-height: 24rem;
 
     display: flex;
@@ -230,6 +366,24 @@ nav a:hover {
 
 .feature img {
     width: 40%;
+}
+
+@media (max-width: 800px) {
+    .feature {
+        display: block;
+        max-height: 45rem;
+        text-align: center;
+    }
+
+    .left {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .feature img {
+        width: 90%;
+        margin: 1rem 0;
+    }
 }
 
 /* Survey */
@@ -263,20 +417,53 @@ nav a:hover {
 }
 
 .first {
-    background-image: url(../img/card_2.jpg);
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.6)
+    ),
+    url(../img/card_2.jpg) center;
+    background-size: cover;
 }
 
 .second {
-    background-image: url(../img/card_3.jpg);
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.6)
+    ),
+    url(../img/card_3.jpg) center;
+    background-size: cover;
 }
 
 .third {
-    background-image: url(../img/card_1.jpg);
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.6)
+    ),
+    url(../img/card_1.jpg) center;
+    background-size: cover;
+}
+
+@media (max-width: 1080px) {
+    .survey {
+        flex-direction: column;
+        height: 60rem;
+    }
+
+    .survey-opt {
+        height: 20rem;
+    }
+
+    .survey-opt h3 {
+        font-size: 2rem;
+    }
 }
 
 /* Partners */
 .partners {
-    padding: 2rem 0;
+    padding: 4rem 0;
     background-color: rgb(245, 245, 245);
     text-align: center;
 }
@@ -297,15 +484,31 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem 1rem;
+    padding: 2rem 3rem;
 
     background-color: rgb(24, 24, 24);
 }
 
 footer i {
-    margin-left: 1rem;
+    margin-left: 1.6rem;
 
-    color: rgb(200, 200, 200);
+    color: rgba(231, 231, 231, 0.6);
+    font-size: 1.8rem;
 
-    font-size: 2rem;
+    transition: .2s ease-in-out;
+}
+
+footer i:hover {
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    footer {
+        padding: 1rem 0.4rem;
+    }
+
+    footer i {
+        font-size: 1.6rem;
+    }
 }
