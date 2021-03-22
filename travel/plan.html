@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visit Tokyo</title>
+
+    <script src="https://kit.fontawesome.com/c4684a5e48.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/step_form.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="../index.html">
+        <div class="icon">
+            <i class="fas fa-torii-gate"></i>
+            <h3>VisitTokyo</h3>
+        </div>
+    </a> <!--Icon-->
+
+    <div class="nav top-nav">
+        <nav>
+            <a href="#">Travel</a>
+            <a href="#">Landmarks</a>
+            <a href="plan.html" class="active">Plan</a>
+            <a href="#">Sign Up</a>
+        </nav> <!--Navigation-->
+
+        <div class="menu-btn">
+            <span class="menu-btn_burger"></span>
+        </div> <!--Mobile menu-->
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="align-center">
+      <h2>Plan your trip today</h2>
+      <p>Donec eleifend interdum ante ut finibus. Quisque at nisl quis metus fermentum ultricies. Nam in iaculis lorem. 
+        Nulla ac sollicitudin neque. Morbi luctus, eros vitae mollis iaculis, urna ex convallis nulla, sed sollicitudin 
+        nunc sem non massa. Phasellus consectetur gravida nibh ut fringilla. </p>
+      
+      <div class="form-container" id="step-form" data-steps="3">
+        <div class="form-stepper">
+          <div id="plan-step" class="step complete">
+            <i class="fas fa-map-marked-alt"></i>
+            <h4>About Your Trip</h4>
+          </div>
+
+          <div class="line"></div>
+
+          <div id="plan-step" class="step">
+            <i class="fas fa-user-edit"></i>
+            <h4>Personal Info</h4>
+          </div>
+
+          <div class="line"></div>
+
+          <div id="plan-step" class="step">
+            <i class="fas fa-calendar-check"></i>
+            <h4>You are all set!</h4>
+          </div>
+        </div>
+
+        <div class="step-page current" id="form-step-page">
+          <p>Tell us some details about your dream vacation.</p>
+
+          <form method="POST" action="#">
+            <div class="form-group">
+              <select name="destination">
+                <option disabled selected value="">Destination</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="osaka">Osaka</option>
+                <option value="kyoto">Kyoto</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <div>
+                <label>From</label>
+                <input type="date" required name="from" id="plan-date-from">
+              </div>
+
+              <div>
+                <label>To</label>
+                <input type="date" required name="to" id="plan-date-to">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Your budget (In MXN)</label>
+              <input type="number" step="0.01" min="0" required name="budget" id="plan-budget">
+            </div>
+
+            <input type="submit" class="btn btn-main" value="Continue">
+          </form>
+        </div>
+
+        <div class="step-page" id="form-step-page">
+          <p>How can we get in touch with you?</p>
+
+          <form method="POST" action="#">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" required name="firstName">
+
+              <label>Last Name</label>
+              <input type="text" required name="lastName">
+            </div>
+
+            <div class="form-group">
+              <label>E-mail address</label>
+              <input type="email" required name="email">
+            </div>
+
+            <input type="submit" class="btn btn-main" value="Continue">
+          </form>
+        </div>
+
+        <div class="step-page" id="form-step-page">
+          <h3>Advice is on the way</h3>
+
+          <p>One of our travel consultants will get in touch with you on the next 1-2 days</p>
+          <div class="button">
+            <a href="../index.html" class="button-content">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html">
+        <div class="icon">
+            <i class="fas fa-torii-gate"></i>
+            <h3>Visit Tokyo</h3>
+        </div>
+    </a>
+    <div>
+        <i class="fas fa-share-alt"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/forms.js"></script>
+</body>
+</html>

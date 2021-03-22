@@ -16,7 +16,7 @@ html {
 }
 
 html, body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     line-height: 1.2;
 
@@ -24,16 +24,16 @@ html, body {
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 img {
     max-width: 100%; 
 }
 
-.content {
+section.content {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 h1 {
@@ -123,6 +123,25 @@ a {
     font-size: 1.2rem;
 }
 
+input.btn {
+    margin-top: 1.6rem;
+    padding: 0.8rem 2rem;
+
+    background-color: #222;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+input.btn.btn-main {
+    background-color: #222;
+}
+
 .action-btn{
     margin-top: 3rem;
 
@@ -200,7 +219,7 @@ a {
 }
 
 /* NavBar */
-.navbar {
+div.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -243,7 +262,7 @@ nav a {
     font-size: 1.4rem;
     text-decoration: none;
 
-    transition: .3s ease-in-out;
+    transition: .3s ease-in-out background-color;
 }
 
 nav a:last-of-type {
@@ -256,13 +275,12 @@ nav a:hover {
 
 @media (max-width: 800px) {
 
-    /* Temporal */
     nav {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
 
         background-color: rgba(0,0,0, 0.8);
         flex-direction: column;
@@ -281,10 +299,10 @@ nav a:hover {
         padding: 1.8rem 1rem;
 
         text-align: center;
-        font-size: 2.6;
+        font-size: 2rem;
     }
 
-    .navbar {
+    div.navbar {
         padding-left: 2rem;
     }
 
@@ -300,7 +318,7 @@ nav a:hover {
         transition: all .3s ease-in-out;
     }
 
-    .menu-btn_burger {
+    span.menu-btn-burger {
         position: absolute;
         right: 0;
         top: 0.8rem;
@@ -311,7 +329,7 @@ nav a:hover {
         transition: all .3s ease-in-out;
     }
 
-    .menu-btn_burger::before {
+    span.menu-btn-burger::before {
         content: '';
         position: absolute;
         top: -0.8rem;
@@ -322,7 +340,7 @@ nav a:hover {
         transition: all .3s ease-in-out;
     }
 
-    .menu-btn_burger::after {
+    span.menu-btn-burger::after {
         content: '';
         position: absolute;
         top: 0.8rem;
@@ -333,19 +351,19 @@ nav a:hover {
         transition: all .3s ease-in-out;
     }
 
-    .menu-btn_burger.open {
+    span.menu-btn-burger.open {
         -webkit-transform: rotate(720deg);
             transform: rotate(720deg);
 
         background: transparent;
     }
 
-    .menu-btn_burger.open::before {
+    span.menu-btn-burger.open::before {
         -webkit-transform: rotate(45deg) translate(5px, 5px);
         transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .menu-btn_burger.open::after {
+    span.menu-btn-burger.open::after {
         -webkit-transform: rotate(-45deg) translate(12px,-12px);
         transform: rotate(-45deg) translate(12px,-12px);
     }
@@ -419,7 +437,7 @@ nav a:hover {
 .first {
     background: linear-gradient(
         to right,
-        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.5),
         rgba(0,0,0, 0.6)
     ),
     url(../img/card_2.jpg) center;
@@ -429,7 +447,7 @@ nav a:hover {
 .second {
     background: linear-gradient(
         to right,
-        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.5),
         rgba(0,0,0, 0.6)
     ),
     url(../img/card_3.jpg) center;
@@ -439,7 +457,7 @@ nav a:hover {
 .third {
     background: linear-gradient(
         to right,
-        rgba(0,0,0, 0.6),
+        rgba(0,0,0, 0.5),
         rgba(0,0,0, 0.6)
     ),
     url(../img/card_1.jpg) center;

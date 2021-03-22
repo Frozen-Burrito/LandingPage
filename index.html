@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Visit | Country</title>
+    <title>Visit Tokyo</title>
 
     <script src="https://kit.fontawesome.com/c4684a5e48.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
     
@@ -32,7 +31,7 @@
         </div>
     </div>
 
-    <header class="navbar">
+    <div class="navbar">
         <a href="index.html">
             <div class="icon">
                 <i class="fas fa-torii-gate"></i>
@@ -40,20 +39,20 @@
             </div>
         </a> <!--Icon-->
 
-        <div class="nav">
-            <nav>
+        <div class="nav-wrapper">
+            <nav id="main-nav">
                 <a href="#">Travel</a>
                 <a href="#">Landmarks</a>
-                <a href="#">Plan</a>
+                <a href="/travel/plan.html">Plan</a>
                 <a href="#">Sign Up</a>
             </nav> <!--Navigation-->
 
-            <div class="menu-btn">
-                <span class="menu-btn_burger"></span>
+            <div class="menu-btn" id="mobile-menu-btn">
+                <span class="menu-btn-burger"></span>
             </div> <!--Mobile menu-->
         </div>
 
-    </header>
+    </div>
 
     <section class="content">
         <div class="feature">
@@ -63,7 +62,7 @@
                     Nulla ac sollicitudin neque. Morbi luctus, eros vitae mollis iaculis, urna ex convallis nulla, sed sollicitudin 
                     nunc sem non massa. Phasellus consectetur gravida nibh ut fringilla. </p>
                 <div class="button">
-                    <a href="#" class="button-content">Plan yours</a>
+                    <a href="/travel/plan.html" class="button-content">Plan yours</a>
                 </div>
             </div>
             <img src="img/feature_1.jpg">
@@ -100,7 +99,7 @@
         <h2 class="center">Will you...</h2>
         <div class="survey">
             <div class="survey-opt first">
-                <h3>Explore the streets of Tokio</h3>
+                <h3>Explore the streets of Tokyo</h3>
             </div>
             <div class="survey-opt second">
                 <h3>Find secrets at the historic buildings</h3>
@@ -120,11 +119,12 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <a href="index.html">
             <div class="icon">
                 <i class="fas fa-torii-gate"></i>
-                <h3>Visit Tokio</h3>
+                <h3>Visit Tokyo</h3>
             </div>
         </a>
         <div>

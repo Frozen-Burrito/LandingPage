@@ -1,0 +1,97 @@
+div.form-container {
+  margin: 2rem auto 0 auto;
+  max-width: 80%;
+}
+
+@media (max-width: 800px) {
+  div.form-container {
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+}
+
+div.form-container div.form-stepper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+div.form-container div.form-stepper div.step {
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  color: rgb(150, 150, 150);
+}
+
+div.form-container div.form-stepper div.step.complete {
+  color: rgb(175, 51, 51);
+}
+
+div.form-container div.form-stepper div.step h4 {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+div.form-container div.form-stepper .line {
+  height: 1px;
+  min-width: 4rem;
+  background-color: rgb(150, 150, 150);
+}
+
+@media (max-width: 800px) {
+  div.form-container div.form-stepper {
+    justify-content: space-evenly;
+  }
+  
+  div.form-container div.form-stepper div.step {
+    font-size: 1.2rem;
+  }
+
+  div.form-container div.form-stepper .line {
+    min-width: 1rem;
+  }
+}
+
+div.step-page {
+  display: none;
+}
+
+div.step-page.current {
+  display: block;
+}
+
+form div.form-group {
+  padding: 0.6rem 0;
+}
+
+form div.form-group label {
+  margin-right: 0.4rem;
+}
+
+form div.form-group input, form div.form-group select {
+  padding: 0.4rem 0.6rem;
+  outline: none;
+  border: 2px solid rgb(201, 201, 201);
+  border-radius: 5px;
+}
+
+form div.form-group input[type="date"], form div.form-group select {
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  form div.form-group div {
+    padding: 0.6rem 0;
+  }
+
+  form div.form-group {
+    width: 100%;
+    text-align: left;
+  }
+
+  form div.form-group input, form div.form-group select {
+    width: 100%;
+  }
+}

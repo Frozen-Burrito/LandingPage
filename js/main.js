@@ -1,7 +1,7 @@
-const menuBtn = document.querySelector('.menu-btn');
-const menuBars = document.querySelector('.menu-btn_burger');
+const menuBtn = document.querySelector('#mobile-menu-btn');
+const menuBars = menuBtn.querySelector('span');
 
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('#main-nav');
 
 let showMenu = false;
 
